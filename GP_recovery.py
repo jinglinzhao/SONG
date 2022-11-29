@@ -33,7 +33,7 @@ nu_max = mu
 delta_nu = 135
 epsilon = 0
 Q = 4e2
-N = 7 # 25*135/2=1620
+N = 15 # 25*135/2=1620
     
 kernel = 0  
 for i in range(N):

@@ -1,18 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from PyAstronomy import pyasl
-from datetime import datetime
-import celerite
-from celerite import terms
-from scipy.optimize import minimize
+# from PyAstronomy import pyasl
+# from datetime import datetime
+# import celerite
+# from celerite import terms
+# from scipy.optimize import minimize
 from scipy.signal import find_peaks
 from astropy.timeseries import LombScargle
-from datetime import timedelta, date
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm
+# from datetime import timedelta, date
+# from sklearn.linear_model import LinearRegression
+# import statsmodels.api as sm
 
-from NEID_solar_functions import *
-from GP_kernels import *
+# from NEID_solar_functions import *
+# from GP_kernels import *
 
 import jax
 import jax.numpy as jnp
@@ -33,11 +33,11 @@ nu_max = mu
 delta_nu = 135
 epsilon = 0
 Q = 4e2
-N = 15 # 25*135/2=1620
+N = 25 # 25*135/2=1620
     
 kernel = 0  
 for i in range(N):
     omega = 2*np.pi*(nu_max + (-(N-1)/2+i)*delta_nu/2 + epsilon)*uHz_conv
     sigma = gaussian_2(nu_max + (-(N-1)/2+i)*delta_nu/2 + epsilon, amp, nu_max, sig) 
     kernel += tinygp.kernels.quasisep.SHO(omega, Q, sigma)
-    print(sigma)
+    # print(sigma)

@@ -3,7 +3,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=4        # number of processes
-#SBATCH --mem-per-cpu=4GB (use share ram)
+#SBATCH --mem-per-cpu=4GB        # (use share ram)
 #SBATCH --time=1:00:00 
 #SBATCH --output=output.log
 #SBATCH --error=error.log
